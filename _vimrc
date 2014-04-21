@@ -1,4 +1,4 @@
-" https://github.com/sontek/dotfiles/
+" https://github.com/so/tek/dotfiles/
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
@@ -51,9 +51,10 @@
 " ==========================================================
 set nocompatible              " Don't be compatible with vi
 let mapleader=","             " change the leader to be a comma vs slash
-
+imap jj <Esc>
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
+set tags=tags;/
 
 fu! SplitScroll()
     :wincmd v
@@ -176,7 +177,7 @@ set pumheight=6             " Keep a small completion window
 set cursorline              " have a line indicate the cursor location
 set ruler                   " show the cursor position all the time
 set nostartofline           " Avoid moving cursor to BOL when jumping around
-set virtualedit=block       " Let cursor move past the last char in <C-v> mode
+set virtualedit=onemore     " Let cursor move past the last char in <C-v> mode
 set scrolloff=3             " Keep 3 context lines above and below the cursor
 set backspace=2             " Allow backspacing over autoindent, EOL, and BOL
 set showmatch               " Briefly jump to a paren once it's balanced
@@ -276,7 +277,7 @@ autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 so
 
 " Python
 "au BufRead *.py compiler nose
-au FileType python set omnifunc=pythoncomplete#Complete
+"au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
@@ -307,3 +308,54 @@ endif
 if exists("&colorcolumn")
    set colorcolumn=79
 endif
+
+" Disabling arrow keys in vim
+" inoremap  <Up>     <NOP>
+" inoremap  <Down>   <NOP>
+" inoremap  <Left>   <NOP>
+" inoremap  <Right>  <NOP>
+" noremap   <Up>     <NOP>
+" noremap   <Down>   <NOP>
+" noremap   <Left>   <NOP>
+" noremap   <Right>  <NOP>
+
+nmap <S-Enter> O<Esc>j
+nmap <CR> o<Esc>k
+
+" List invisible chars, use the same as textmate 
+set listchars=tab:▸\ ,eol:¬
+nmap <leader>l :set list!<CR>
+
+"Invisible character colors
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+"let NERDTreeMapOpenInTab='<ENTER>'
+
+autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
+
+"Vertical resizing
+nnoremap <Left> :vertical resize +1<CR>
+nnoremap <Right> :vertical resize -1<CR>
+nnoremap <Up> :resize +1<CR>
+nnoremap <Down> :resize -1<CR>
+
+" nerd tree find
+map <leader>r :NERDTreeFind<cr>
+
+" Cursor blinking
+set gcr=n:blinkon0
+
+"press F5 to get a list of buffers
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
+" choosewin plugin
+nmap  -  <Plug>(choosewin)
+
+" choosewin overlay feature
+let g:choosewin_overlay_enable = 1
+
+" remove brittspace
+autocmd BufWritePre *.scala :%s/\s+$//e
+autocmd BufWritePre *.py :%s/\s+$//e
