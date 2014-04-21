@@ -1,8 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/sontek/.virtualenvs/notaliens3/src/notaliens.com/develop-eggs'
-let g:netrw_dirhist_2='/home/sontek/.config'
-let g:netrw_dirhist_3='/home/sontek/.virtualenvs/notaliens3/src/notaliens.com/develop-eggs'
-let g:netrw_dirhist_4='/home/sontek/.virtualenvs/notaliens3/src/notaliens.com/notaliens/notaliens/sites/views'
-let g:netrw_dirhist_5='/home/sontek/.virtualenvs/screenshot/src/build'
-let g:netrw_dirhist_6='/home/sontek/src/not-aliens-stack/roles'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/opt/twitter/rvm/rubies/ruby-1.9.3-p484/lib/ruby/gems/1.9.1/gems/hayaku-3.8.4'
+let g:netrw_dirhist_2='/Users/asingh/workspace/science/src/python/twitter/redline/frontend/dashboard'
