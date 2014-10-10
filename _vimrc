@@ -359,3 +359,14 @@ let g:choosewin_overlay_enable = 1
 " remove brittspace
 autocmd BufWritePre *.scala :%s/\s+$//e
 autocmd BufWritePre *.py :%s/\s+$//e
+
+" Go vim Syntax
+
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload
+" them.
+filetype off
+filetype plugin indent off
+set runtimepath+=/usr/local/Cellar/go/1.3.3/libexec/misc/vim
+filetype plugin indent on
+syntax on
