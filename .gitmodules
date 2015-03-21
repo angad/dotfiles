@@ -67,3 +67,6 @@
 [submodule "vim-choosewin"]
 	path = vim-choosewin
 	url = https://github.com/t9md/vim-choosewin
+[submodule "_oh-my-zsh"]
+	path = _oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
