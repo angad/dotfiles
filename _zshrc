@@ -107,4 +107,12 @@ stt_title () { setTerminalText 2 $@; }
    (sleep $(($2 * 60))  && terminal-notifier -message "$1" -title "Reminder")&
 }
 
+# boot2docker host
+export DOCKER_HOST=tcp://192.168.59.103:2376
+
+# virtualenvwrapper env Path
+export WORKON_HOME=~/workspace/envs
+mkdir -p $WORKON_HOME
+source /usr/local/bin/virtualenvwrapper.sh
+
 source ~/.office_zshrc 
