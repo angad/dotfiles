@@ -35,7 +35,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-
 # Set up TERM variables.
 # vt100 and xterm have no color in vim (at least on unixs), but if we call them xterm-color, they will.
 # (vt100 for F-Secure SSH.)
@@ -138,8 +137,6 @@ if [ "$venwrap" != "" ]; then
     source $venwrap
 fi
 
-alias vim="emacs"
-
 PYTHONSTARTUP=~/.pythonrc.py
 export PYTHONSTARTUP
 
@@ -156,13 +153,9 @@ parse_svn_url() {
 parse_svn_repository_root() {
   svn info 2>/dev/null | sed -ne 's#^Repository Root: ##p'
 }
-set -o vi
-export EDITOR="emacs"
-export GIT_EDITOR="emacs"
 
 # Add git and svn branch names
 export PS1="$PS1\$(parse_git_branch)\$(parse_svn_branch) "
-
 
 # /etc/profile.d/complete-hosts.sh
 # Autocomplete Hostnames for SSH etc.

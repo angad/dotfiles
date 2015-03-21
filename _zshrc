@@ -85,7 +85,7 @@ function listening {
   lsof -i -n -P -sTCP:listen
 }
 
-function grm {
+function gitrm {
   git rm $(git ls-files --deleted) 
 }
 
