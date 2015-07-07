@@ -361,6 +361,9 @@ autocmd BufWritePre *.scala :%s/\s+$//e
 autocmd BufWritePre *.py :%s/\s+$//e
 
 " Go vim Syntax
+let g:go_fmt_autosave = 0
+
+
 
 " Some Linux distributions set filetype in /etc/vimrc.
 " Clear filetype flags before changing runtimepath to force Vim to reload

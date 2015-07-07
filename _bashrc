@@ -177,3 +177,5 @@ _complete_hosts () {
 
 complete -F _complete_hosts ssh
 complete -F _complete_hosts host
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

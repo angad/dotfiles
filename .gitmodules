@@ -64,9 +64,12 @@
 [submodule "_vim/bundle/vim-choosewin"]
 	path = _vim/bundle/vim-choosewin
 	url = https://github.com/t9md/vim-choosewin
-[submodule "vim-choosewin"]
-	path = vim-choosewin
-	url = https://github.com/t9md/vim-choosewin
-[submodule "_oh-my-zsh"]
-	path = _oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "_vim/bundle/ag"]
+	path = _vim/bundle/ag
+	url = https://github.com/rking/ag.vim
+[submodule "_vim/bundle/github-vim"]
+	path = _vim/bundle/github-vim
+	url = https://github.com/solars/github-vim
+[submodule "_vim/bundle/vim-go"]
+	path = _vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go
