@@ -1,0 +1,8 @@
+apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list
+apt-get update
+apt-get purge lxc-docker
+groupadd docker
+apt-get install -y linux-image-extra-$(uname -r) docker-engine
+echo 'GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"' >> /etc/default/grub
+update-grub
