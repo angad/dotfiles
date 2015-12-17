@@ -1,6 +1,6 @@
 [user]
 	name = Angad Singh
-	email = angad@angad.sg
+	email = angad@viki.com
 
 [color]
     diff = auto
@@ -30,3 +30,9 @@
 
 [merge]
 	tool = vimdiff
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/

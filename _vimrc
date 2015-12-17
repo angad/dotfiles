@@ -185,7 +185,7 @@ set nowrap                  " don't wrap text
 set linebreak               " don't wrap textin the middle of a word
 set autoindent              " always set autoindenting on
 set smartindent             " use smart indent if there is no indent file
-set tabstop=4               " <tab> inserts 4 spaces 
+set tabstop=4               " <tab> inserts 4 spaces
 set shiftwidth=4            " but an indent level is 2 spaces wide.
 set softtabstop=4           " <BS> over an autoindent deletes both spaces.
 set expandtab               " Use spaces, not tabs, for autoindent/tab key.
@@ -227,7 +227,7 @@ set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
 """ Searching and Patterns
 set ignorecase              " Default to using case insensitive searches,
 set smartcase               " unless uppercase letters are used in the regex.
-set smarttab                " Handle tabs more intelligently 
+set smarttab                " Handle tabs more intelligently
 set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
 
@@ -322,9 +322,9 @@ endif
 nmap <S-Enter> O<Esc>j
 nmap <CR> o<Esc>k
 
-" List invisible chars, use the same as textmate 
-set listchars=tab:▸\ ,eol:¬
-nmap <leader>l :set list!<CR>
+" List invisible chars, use the same as textmate
+" set listchars=tab:▸\ ,eol:¬
+" nmap <leader>l :set list!<CR>
 
 "Invisible character colors
 highlight NonText guifg=#4a4a59
@@ -363,8 +363,6 @@ autocmd BufWritePre *.py :%s/\s+$//e
 " Go vim Syntax
 let g:go_fmt_autosave = 0
 
-
-
 " Some Linux distributions set filetype in /etc/vimrc.
 " Clear filetype flags before changing runtimepath to force Vim to reload
 " them.
@@ -373,3 +371,12 @@ filetype plugin indent off
 set runtimepath+=/usr/local/Cellar/go/1.3.3/libexec/misc/vim
 filetype plugin indent on
 syntax on
+
+" airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <silent> <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
