@@ -116,3 +116,5 @@ mkdir -p $WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
 
 # source ~/.office_zshrc 
+date
+cal
