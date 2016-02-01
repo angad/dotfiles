@@ -49,6 +49,10 @@
 " ==========================================================
 " Shortcuts
 " ==========================================================
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+
 set nocompatible              " Don't be compatible with vi
 let mapleader=","             " change the leader to be a comma vs slash
 imap jj <Esc>
