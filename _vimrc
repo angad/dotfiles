@@ -1,4 +1,4 @@
-" https://github.com/so/tek/dotfiles/
+" https://github.com/angad/dotfiles
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
@@ -21,9 +21,6 @@
 "
 " Commant-T
 "     Allows easy search and opening of files within a given path
-"
-" Snipmate
-"     Configurable snippets to avoid re-typing common comands
 "
 " PyFlakes
 "     Underlines and displays errors with Python on-the-fly
@@ -163,7 +160,6 @@ set wildignore+=*.egg-info/**
 
 set grepprg=ack         " replace the default grep program with ack
 
-
 " Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
 
@@ -288,8 +284,6 @@ au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
 
-
-
 " Add the virtualenv's site-packages to vim path
 if has('python')
 py << EOF
@@ -382,5 +376,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
+" remove whitespaces on F6
 nnoremap <F5> :buffers<CR>:buffer<Space>
 nnoremap <silent> <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>

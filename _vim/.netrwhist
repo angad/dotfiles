@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/angad/workspace/src/ops/src/ssh_config'
-let g:netrw_dirhist_2='/Users/angad/workspace/src/ops/src/ansible/tasks'
-let g:netrw_dirhist_3='/Users/angad/workspace/viki-discourse-docker/Docker'
-let g:netrw_dirhist_4='/Users/angad/workspace/src/ops/src/deploys'
-let g:netrw_dirhist_5='/Users/angad/workspace/src/ops/src/dockerfiles/ruby/2.2'
-let g:netrw_dirhist_6='/Users/angad/workspace/src/ops/src/dockerfiles/ruby'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/angad/workspace/experimentation'
