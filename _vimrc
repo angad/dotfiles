@@ -378,4 +378,4 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " remove whitespaces on F6
 nnoremap <F5> :buffers<CR>:buffer<Space>
-nnoremap <silent> <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+nnoremap <silent> <leader>5 :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
