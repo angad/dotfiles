@@ -50,6 +50,7 @@ ZSH_THEME="agnoster"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+export PATH="/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/home/angad/.local/bin:$PATH"
 
 # User configuration
 
@@ -58,6 +59,15 @@ export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/home/angad/.loc
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+# ---------------------------------
+# GOOGLE CLOUD SDK SETUP
+# ---------------------------------
+export GOOGLE_APPLICATION_CREDENTIALS=/Users/angad/.config/gcloud/application_default_credentials.json
+if [ -f '/Users/angad/workspace/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/angad/workspace/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/Users/angad/workspace/google-cloud-sdk/bin:$PATH"
+export ANDROID_SDK_ROOT=/Users/angad/Library/Android/sdk
+
+# PATH configuration
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -145,3 +155,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 byobu
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+***REMOVED***
