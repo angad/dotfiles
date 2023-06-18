@@ -128,8 +128,8 @@ mkdir -p $WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
 
 # source ~/.office_zshrc 
-date
-cal
+#date
+#cal
 
 if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
     source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
@@ -154,7 +154,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-byobu
+# byobu
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-***REMOVED***
